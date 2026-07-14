@@ -1,0 +1,242 @@
+@font-face {
+  font-family: fix;
+  src: url(./assets/fonts/Fixture-ExpandedRegular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 0 3vw;
+  background: #f6f6f6;
+  display: grid;
+  grid-template-columns: 5% 35% 20% 15% 20%;
+  grid-template-rows: 25% 50% 25%;
+  font-family: fix;
+  grid-template-areas:
+    "left-nav left right-top right-top right-top"
+    "left-nav left right-center1 right-center1 right-center2"
+    "left-nav left right-bottom1 right-bottom2 right-bottom2";
+}
+
+.left-nav { 
+  grid-area: left-nav;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-nav .navbar {  
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  margin-top: 6vw;
+  gap: 2vw;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+.left {
+  
+  grid-area: left;
+  padding: 2vw 1vw;
+}
+.left .cover {
+  height: 100%;
+  width: 100%;
+  background-image: url("./assets/Vector.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.left .cover .top-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.left .cover .top-text i {
+  font-size: 20px;
+}
+.left .cover .top-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #646464;
+}
+.left .cover .profile {
+  height: 45%;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  padding-right: 3vw;
+  justify-content: end;
+}
+.left .cover .profile img {
+  height: 370px;
+}
+.left .cover .btm {
+  padding: 2px 30px;
+}
+.left .cover .btm h6 {
+  font-size: 3.4vw;
+  color: #f9fcfe;
+  font-weight: 600;
+}
+.left .cover .btm span {
+  font-weight: 200;
+}
+.left .cover .btm p {
+  color: #c7cceb;
+}
+.left .cover .btm .mail {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.left .cover .btm .mail i {
+  color: #c7cceb;
+  font-size: 17px;
+  font-weight: 500;
+}
+.left .cover .btm .line {
+  height: 2px;
+  width: 255px;
+  /* background: #000; */
+  margin-top: 2%;
+  border: 2px dashed #a2a6bf;
+}
+.left .cover .circle img {
+  height: 200px;
+  position: absolute;
+  bottom: 5%;
+  left: 23%;
+}
+.right-top {
+  grid-area: right-top;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.right-top h1 {
+  font-size: 8.4vw;
+  letter-spacing: 5px;
+  font-weight: 900;
+}
+.right-center1 {
+  grid-area: right-center1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.right-center1 .cover {
+  height: 90%;
+  width: 100%;
+}
+.right-center1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
+}
+.right-center2 {
+  grid-area: right-center2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 20px 20px;
+}
+.right-center2 .box:nth-child(1) {
+  height: 50%;
+  width: 60%;
+  background: #a9dad7;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.right-center2 .box h6 {
+  font-size: 40px;
+}
+.right-center2 .box span {
+  font-size: 20px;
+}
+.right-center2 .box:nth-child(2) {
+  height: 50%;
+  width: 60%;
+  background: #8e6fba;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+.right-bottom1 {
+  grid-area: right-bottom1;
+  padding-left: 20px;
+}
+.right-bottom1 .rbtm {
+  height: 85%;
+  width: 80%;
+  background: #595959;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 35px;
+  color: white;
+  font-weight: 400;
+}
+.right-bottom2 {
+  padding: 0 2vh;
+  grid-area: right-bottom2;
+  display: flex;
+  gap: 20px;
+  width: 80%;
+  position: relative;
+}
+.right-bottom2 .rbtm2 {
+  height: 85%;
+  width: 60%;
+  background: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.right-bottom2 .rbtm2 h6 {
+  font-size: 40px;
+}
+.right-bottom2 .rbtm2:nth-child(2) {
+  position: absolute;
+  background-color: #ffc267;
+  height: 85%;
+  width: 50%;
+  right: 1%;
+}
+.right-bottom2 .rbtm2 img {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+}
